@@ -4,84 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Nhúng thư viện bootstrap vào file html -->
+    <!-- Nhúng thư viện bootstrap vào html -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.min.js" language="javascript"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-        <!-- Các thẻ có nghĩa trong HTML5
-            <header> </header>: Định nghĩa phần đầu văn
-            <main></main>: Định nghĩa phần thân
-            <footer> </footer>: Định nghĩa phần chân
-            <section></section>: Định nghĩa các vùng chức năng
+    <div class="container">
+        <!-- <div class="header"></div>: Không có ngữ nghĩa 
+            CÁC THẺ CÓ ĐỊNH NGHĨA TRONG HTML5
+            <header></header>: Định nghĩa phần đầu trang
+            <main></main>: Định nghĩa phần thân trang web
+            <footer></footer>: định nghĩa phần chân trang
+            <section></section>: định nghĩa vùng chức năng trong trang web
         -->
-        <!-- HEARDER -->
-        <!-- justify-content: căn phần tử theo chiều ngang -->
-        <!-- align items: căn các phần tử theo chiều dọc -->
-        <header class="d-flex justify-content-around align-items-center">
-            <a href="">TRANG CHỦ</a>
-            <a href="">SẢN PHẨM</a>
-            <a href="">
-                <!-- LOGO -->
-                <img src="img/logo.png" width="100" height="100" alt="">
-            </a>
-            <a href="">LIÊN HỆ</a>
-            <a href="">KHUYẾN MẠI</a>
+        <!-- HEADER -->
+        <header>
+            <!-- VÙNG ĐIỀU HƯỚNG TRÊN WEB -->
+            <!-- d-flex: điều chỉnh vị trí các phần tử
+                justify-content: điều chỉnh phần tử theo hàng ngang 
+                align-items: điều chỉnh các phần tử theo chiều dọc-->
+            <nav class="d-flex justify-content-evenly align-items-center">
+                <a href="">TRANG CHỦ</a>
+                <a href="">BLOG</a>
+                <a href="">
+                    <img src="img/logo.png" width="100" height="100" alt="">
+                </a>
+                <a href="">SẢN PHẨM</a>
+                <a href="">KHUYẾN MẠI</a>
+            </nav>
         </header>
         <!-- END HEADER -->
         <!-- MAIN -->
-        <!-- CÁC KÝ HIỆU GRID CỦA THIẾT BỊ 
-            col-xs-[Số lượng cột]: điện thoại di động nằm dọc
-            col-sm-[Số lượng cột]: điện thoại di động nằm ngang
-            col-md-[Số lượng cột]: máy tính bảng
-            col-lg-[Số lượng cột]: laptop, máy tính để bàn
-        -->
-        <main class="container d-flex flex-column justify-content-center">
+        <main>
             <h1>RETRO</h1>
             <!-- SLIDE -->
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                <div class="carousel-item active">
                     <img src="img/slide1.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
+                </div>
+                <div class="carousel-item">
                     <img src="img/slide2.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
+                </div>
+                <div class="carousel-item">
                     <img src="img/slide3.png" class="d-block w-100" alt="...">
-                  </div>
+                </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
                 </button>
-              </div>
-            <!--END SLIDE -->
-            <!-- ABOUT ME -->
+            </div>
+            <!-- END SLIDE -->
+            <!-- ABOUNT ME -->
+            <!-- QUY TẮC SỬ DỤNG GRID
+            - 1 hàng có độ rộng là 12 cột
+            - các phần tử có độ tổng rộng > 12, thì sẽ được đẩy xuống hàng tiếp theo
+            - Quy tắc khai báo với từng kiểu màn hình:
+            + col-xs-[số lượng cột]: điện thoại di dộng
+            + col-sm-[số lượng cột]: điện thoại di động nằm ngang
+            + col-md-[số lượng cột]: máy tính bảng
+            + col-lg-[số lượng cột]: máy tính để bàn, labtop
+             -->
+            <h1>GIỚI THIỆU</h1>
             <section class="row">
                 <!-- SẢN PHẨM 1 -->
                 <section class="col-lg-3 col-md-6 col-xs-12">
                     <img src="img/sp/sp1.jpg" width="300" height="300" alt="">
                 </section>
                  <!-- SẢN PHẨM 2 -->
-                 <section class="col-lg-3 col-md-6 col-xs-12 ">
-                    <img src="img/sp/sp2.jpg" width="300" height="300" alt="">
+                 <section class="col-lg-3 col-md-6 col-xs-12">
+                    <img src="img/sp/sp2.jpg" width="300" height="300"alt="">
                 </section>
                  <!-- SẢN PHẨM 3 -->
                  <section class="col-lg-3 col-md-6 col-xs-12">
-                    <img src="img/sp/sp3.jpg" width="300" height="300" alt="">
+                    <img src="img/sp/sp3.jpg" width="300" height="300"alt="">
                 </section>
                  <!-- SẢN PHẨM 4 -->
-                <section class="col-lg-3 col-md-6 col-xs-12">
+                 <section class="col-lg-3 col-md-6 col-xs-12">
                     <img src="img/sp/sp4.jpg" width="300" height="300" alt="">
                 </section>
             </section>
-            <!-- END ABOUT ME -->
         </main>
         <!-- END MAIN -->
+        <!-- FOOTER -->
+        <footer>
+            
+        </footer>
+        <!-- END FOOTER -->
+    </div>
+
 </body>
 </html>
