@@ -27,7 +27,18 @@
                 <a href="">TRANG CHỦ</a>
                 <a href="">BLOG</a>
                 <a href="">
-                    <img src="img/logo.png" width="100" height="100" alt="">
+                    <!-- <img src="img/logo.png" width="100" height="100" alt=""> -->
+                    <!-- VẼ LOGO -->
+                    <svg width="200" height="200">
+                        <!-- circle: hình tròn
+                            rect: hình chữ nhật
+                            polygon: hình đa giác 
+                            ellipse: hình elipse
+                        -->
+                        <circle cy="100" cx="100" r="50" stroke="000000" stoke-width="2" fill="#7cbcbc">
+                        </circle>
+                        <text fill="#ffffff" font-size="50" x="100" y="100">DEMO</text>
+                    </svg>
                 </a>
                 <a href="">SẢN PHẨM</a>
                 <a href="">KHUYẾN MẠI</a>
@@ -90,11 +101,28 @@
                     <img src="img/sp/sp4.jpg" width="300" height="300" alt="">
                 </section>
             </section>
+            <h1>LIÊN HỆ</h1>
+            <section class="d-flex align-items-center">
+                <!-- Đưa các ô input vào form -->
+                <form action="" class="col-md-6 col-xs-12">
+                    <!-- Type color: <input type="color"/> </br>
+                    Type date: <input type="date"> </br>
+                    Type email: <input type="email"> </br> -->
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address*: </label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                    <button type="submit">Gửi</button>
+                </form>
+            </section>
         </main>
         <!-- END MAIN -->
         <!-- FOOTER -->
         <footer>
-            
         </footer>
         <!-- END FOOTER -->
     </div>
