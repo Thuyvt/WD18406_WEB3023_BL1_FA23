@@ -1,0 +1,102 @@
+/* CLEAR CODE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Quy định độ rộng phần tử = content bên trong */
+}
+@font-face {
+    font-family: myFont;
+    src: url(font/UTM\ Duepuntozero.ttf);
+}
+body {
+    font-family: myFont;
+    /* Sử dụng google font 
+    font-family: 'Roboto', sans-serif;
+    */
+}
+/* transform: phóng to thu nhỏ, di chuyển theo chiều x y, xoay */
+/*  ease: mặc định, bắt đầu chậm, sau đó nhanh
+    linear: tốc độ không đổi
+    ease-in: bắt đầu chậm
+    ease-out: bắt đầu chậm
+    ease-in-out: bắt đầu và kết thúc chậm, ở giữa bình thường
+*/
+.box-sp1:hover {
+    /* xoay 20 độ, phóng to */
+    /* transform: rotate(20deg) scale(1.2); */
+    /*di chuyển lên trên 20px */
+    transform: translateY(-20px);
+    /* Thêm transition giúp chuyển động mượt mà */
+    transition-duration: 3s; /* thời gian diễn ra hiệu ứng */
+    transition-property: transform; /* gọi tên hiệu ứng transform đã có */
+    transition-timing-function: ease-in-out; /* quá trình hiễn ra hiệu ứng nhanh chậm tùy từng thời điểm*/
+}
+/* opacity: làm mờ phần tử */
+.box-sp2 {
+    position: relative;
+}
+.box-sp2 > img {
+    display: block;
+}
+.tensp2 {
+    position: absolute;
+    bottom: 0px;
+    background: rgb(0,0,0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: .5s ease;
+}
+.box-sp2:hover .tensp2 {
+    opacity: 1;
+}
+/* ANIMATION */
+/* from: CSS hiện tại
+   to: CSS mới */
+/* Hiệu ứng di chuyển từ dưới lên */
+@keyframes box3 {
+    from {left: 0; top: 50px;}
+    to {left: 0; top: 0;}
+}
+/* sử dụng animation box3 đã tạo 
+dùng animation cho phần tử nào phải có position relative cho nó
+*/
+.box-sp3 > img:hover{
+    position: relative;
+    animation-name: box3;/* tên animation nam đã tạo trong keyframes*/
+    animation-duration: 4s; /* thời gian diễn ra chuyển động */
+    animation-timing-function: linear;/* tốc độ chuyển động */
+    animation-delay: 1s; /* thời gian chậm trễ trước khi diễn ra animation */
+    animation-iteration-count: infinite; /*số lần chạy animation */
+    animation-direction: alternate; 
+    /* hướng chạy của animation 
+        reverse: chạy ngược chiều keyframes
+        alternate: xuôi 1 lần lần sau ngược lại
+    */
+}
+/* CÓ thể thay thế from và to bằng vị trí thời gian có sự thay đổi diễn ra */
+@keyframes box4 {
+    0% {border-radius: 50%;}
+    /* 25% {border-radius: 40%;} */
+    50% {border-radius: 30%;}
+    /* 75% {border-radius: 20%;} */
+    100% {border-radius: 0%;}
+}
+.box-sp4 > img:hover{
+    position: relative;
+    animation-name: box4;/* tên animation nam đã tạo trong keyframes*/
+    animation-duration: 4s; /* thời gian diễn ra chuyển động */
+    animation-timing-function: linear;/* tốc độ chuyển động */
+    animation-delay: 1s; /* thời gian chậm trễ trước khi diễn ra animation */
+    animation-iteration-count: infinite; /*số lần chạy animation */
+    animation-direction: alternate; 
+    /* hướng chạy của animation 
+        reverse: chạy ngược chiều keyframes
+        alternate: xuôi 1 lần lần sau ngược lại
+    */
+}
